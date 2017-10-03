@@ -1,9 +1,5 @@
 {
     "name": "bokkagroup/bokka-utilities",
-    "type": "wordpress-muplugin",
     "description": "A utilities plugin built to be used in the Catalyst WordPress framework by the Bokka Group.",
-    "license": "GNU2",
-    "require": {
-        "composer/installers": "~1.0"
-    }
+    "license": "GNU2"
 }
