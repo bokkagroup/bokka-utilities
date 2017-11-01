@@ -23,10 +23,10 @@ You should have received a copy of the GNU General Public License
 along with Bokka Utilities. If not, see {License URI}.
 */
 
-namespace BokkaWP;
+namespace Bokka;
 
 /**
- * BokkaWP\Utilities
+ * Bokka\Utilities
  * @version 0.0.1 Singleton
  */
 class Utilities {
@@ -69,7 +69,7 @@ class Utilities {
     {
         $classArray = explode('\\', $className);
 
-        if ($classArray[0] !== "BokkaWP") {
+        if ($classArray[0] !== "Bokka") {
             return;
         }
 
@@ -112,4 +112,4 @@ class Utilities {
     }
 }
 
-$BokkaWPUtilities = Utilities::get_instance();
+$BokkaUtilities = Utilities::get_instance();
