@@ -4,7 +4,7 @@
     "license": "GNU2",
     "autoload": {
         "psr-4": {
-            "Bokka\\Utilities\\": "src"
+            "Bokka\\Utilities\\": "src/bokka-utilities.php"
         }
     }
 }
