@@ -3,6 +3,6 @@
     "description": "A utilities plugin built to be used in the Catalyst WordPress framework by the Bokka Group.",
     "license": "GNU2",
     "autoload": {
-        "psr-4": {"Bokka\\": "vendor/bokkagroup/bokka-utilities/bokka-utilities.php"}
+        "psr-4": {"Bokka\\": "src/bokkaUtilities"}
     }
 }

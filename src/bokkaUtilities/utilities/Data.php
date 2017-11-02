@@ -2,7 +2,7 @@
 
 namespace Bokka\Utilities;
 
-class Data {
+class Data extends Utilities {
     public $states = array(
         'Alabama'=>'AL',
         'Alaska'=>'AK',
@@ -55,4 +55,9 @@ class Data {
         'Wisconsin'=>'WI',
         'Wyoming'=>'WY'
     );
+
+    public static function getStates()
+    {
+        return self::$states;
+    }
 }

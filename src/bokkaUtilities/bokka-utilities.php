@@ -29,6 +29,7 @@ namespace Bokka;
  * Bokka\Utilities
  * @version 0.0.1 Singleton
  */
+
 class Utilities {
 
     private static $instance;
