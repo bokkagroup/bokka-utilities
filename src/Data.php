@@ -2,8 +2,8 @@
 
 namespace Bokka\Utilities;
 
-class Data extends Utilities {
-    public $states = array(
+class Data {
+    private static $states = array(
         'Alabama'=>'AL',
         'Alaska'=>'AK',
         'Arizona'=>'AZ',

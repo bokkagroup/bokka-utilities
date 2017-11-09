@@ -23,7 +23,7 @@ You should have received a copy of the GNU General Public License
 along with Bokka Utilities. If not, see {License URI}.
 */
 
-namespace Bokka;
+namespace Bokka\Utilities;
 
 /**
  * Bokka\Utilities
@@ -34,7 +34,7 @@ class Utilities {
 
     private static $instance;
 
-    public function __construct()
+    protected function __construct()
     {
         if (!defined('BOKKA_UTILITIES_DIRECTORY')) {
             define('BOKKA_UTILITIES_DIRECTORY', plugin_dir_path(__FILE__));
@@ -44,7 +44,7 @@ class Utilities {
 
             $host = $_SERVER['HTTP_HOST'];
 
-            if (strpos($host, '.local') !== false) {
+            if ((strpos($host, '.local') !== false) || (strpos($host, '.dev') !== false)) {
                 define('BOKKA_ENV', "local");
             } elseif (strpos($host, 'staging') !== false) {
                 define('BOKKA_ENV', "staging");
@@ -56,47 +56,6 @@ class Utilities {
         if (!defined('BOKKA_STD_ERROR')) {
             define('BOKKA_STD_ERROR', "Bokka Utilities Error: ");
         }
-
-        // autoload classes in /utilites directory
-        spl_autoload_register(array($this, 'utility_loader'));
-    }
-
-    /**
-     * Autoload utility classes
-     * @param  array $className
-     * @return bool
-     */
-    public function utility_loader($className)
-    {
-        $classArray = explode('\\', $className);
-
-        if ($classArray[0] !== "Bokka") {
-            return;
-        }
-
-        if ($classArray[1] === "Utilities") {
-            $fileName = strtolower(end($classArray)) . '.php';
-        }
-
-        if (!isset($fileName)) {
-            return;
-        }
-
-        $fileURI = implode('', array(BOKKA_UTILITIES_DIRECTORY, 'utilities/', $fileName));
-
-        // make sure the file exists
-        if (!file_exists($fileURI)) {
-            error_log(BOKKA_STD_ERROR . "Could not find file {" . __FILE__ . "}", 0);
-            return;
-        }
-
-        // load it
-        if (file_exists($fileURI)) {
-            require_once($fileURI);
-            return true;
-        }
-
-        return false;
     }
 
     /**
