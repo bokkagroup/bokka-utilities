@@ -2,7 +2,11 @@
 
 namespace Bokka\Utilities;
 
-class Data {
+final class Data {
+    /**
+     * Name/abbreviation state values
+     * @var array
+     */
     private static $states = array(
         'Alabama'=>'AL',
         'Alaska'=>'AK',
@@ -56,6 +60,10 @@ class Data {
         'Wyoming'=>'WY'
     );
 
+    /**
+     * Getter for $states property
+     * @return array $states property
+     */
     public static function getStates()
     {
         return self::$states;

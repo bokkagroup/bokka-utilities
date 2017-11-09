@@ -1,6 +1,6 @@
-# Bokka WordPress Utilities
+# Bokka Utilities
 
-Utility classes used within the Catalyst Atom WordPress theme by the Bokka Group
+General utility classes for use in PHP-based projects.
 
 ## Usage
 
