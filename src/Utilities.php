@@ -112,5 +112,3 @@ class Utilities {
         return static::$instance;
     }
 }
-
-$BokkaUtilities = Utilities::get_instance();
