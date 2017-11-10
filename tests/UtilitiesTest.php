@@ -16,10 +16,16 @@ final class UtilitiesTest extends TestCase
         $utilities = Utilities::getInstance();
 
         //utilities class should return instance
-        $this->assertEquals($utilities, Utilities::getInstance());
+        $this->assertEquals(
+            $utilities,
+            Utilities::getInstance()
+        );
 
         //environment variable is local
-        $this->assertEquals('local', BOKKA_ENV);
+        $this->assertEquals(
+            'local',
+            BOKKA_ENV
+        );
     }
 }
 
