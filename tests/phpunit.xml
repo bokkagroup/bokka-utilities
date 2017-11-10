@@ -1,6 +1,0 @@
-<phpunit
-    colors="true">
-    <php>
-        <server name='HTTP_HOST' value='http://localhost.dev' />
-    </php>
-</phpunit>

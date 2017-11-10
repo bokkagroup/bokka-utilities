@@ -1,6 +1,6 @@
 <?php
 
-require('../src/Data.php');
+require('./src/Data.php');
 
 use PHPUnit\Framework\TestCase;
 use Bokka\Utilities\Data as Data;

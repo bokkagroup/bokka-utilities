@@ -1,0 +1,11 @@
+<phpunit
+    colors="true">
+    <testsuites>
+        <testsuite name="PHPUnit">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name='HTTP_HOST' value='http://localhost.dev' />
+    </php>
+</phpunit>

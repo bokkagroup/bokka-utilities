@@ -9,3 +9,6 @@ Thumbs.db
 
 # composer
 /vendor
+
+#npm
+/node_modules

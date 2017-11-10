@@ -1,6 +1,6 @@
 <?php
 
-require('../src/Text.php');
+require('./src/Text.php');
 
 use PHPUnit\Framework\TestCase;
 use Bokka\Utilities\Text as Text;

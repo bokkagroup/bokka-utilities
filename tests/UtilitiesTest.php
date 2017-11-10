@@ -1,6 +1,6 @@
 <?php
 
-require('../src/Utilities.php');
+require('./src/Utilities.php');
 
 use PHPUnit\Framework\TestCase;
 use Bokka\Utilities\Utilities as Utilities;

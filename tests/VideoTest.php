@@ -1,6 +1,6 @@
 <?php
 
-require('../src/Video.php');
+require('./src/Video.php');
 
 use PHPUnit\Framework\TestCase;
 use Bokka\Utilities\Video as Video;
