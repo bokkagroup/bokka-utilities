@@ -2,6 +2,10 @@
 
 namespace Bokka\Utilities;
 
+/**
+ * Bokka\Utilities\Data
+ * @version 0.0.1 Singleton
+ */
 final class Data {
     /**
      * Name/abbreviation state values

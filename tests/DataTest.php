@@ -1,6 +1,6 @@
 <?php
 
-require('./src/Data.php');
+require('../src/Data.php');
 
 use PHPUnit\Framework\TestCase;
 use Bokka\Utilities\Data as Data;
@@ -24,7 +24,7 @@ final class DataTest extends TestCase
         //array is not empty
         $this->assertNotEmpty($states);
 
-        //array should have key Alabama
+        //array should contain key Alabama
         $this->assertArrayHasKey(
             'Alabama',
             $states
