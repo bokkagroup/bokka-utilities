@@ -26,22 +26,16 @@ along with Bokka Utilities. If not, see {License URI}.
 namespace Bokka\Utilities;
 
 /**
- * Bokka\Utilities
+ * Bokka\Utilities\Utilities
  * @version 0.0.1 Singleton
  */
-
 class Utilities {
 
     private static $instance;
 
     protected function __construct()
     {
-        if (!defined('BOKKA_UTILITIES_DIRECTORY')) {
-            define('BOKKA_UTILITIES_DIRECTORY', plugin_dir_path(__FILE__));
-        }
-
         if (!defined('BOKKA_ENV') && isset($_SERVER) && $_SERVER['HTTP_HOST']) {
-
             $host = $_SERVER['HTTP_HOST'];
 
             if ((strpos($host, '.local') !== false) || (strpos($host, '.dev') !== false)) {
@@ -52,17 +46,13 @@ class Utilities {
                 define('BOKKA_ENV', "production");
             }
         }
-
-        if (!defined('BOKKA_STD_ERROR')) {
-            define('BOKKA_STD_ERROR', "Bokka Utilities Error: ");
-        }
     }
 
     /**
      * Singleton instantiation
      * @return [static] instance
      */
-    public static function get_instance()
+    public static function getInstance()
     {
         if (null === static::$instance) {
             static::$instance = new static();
