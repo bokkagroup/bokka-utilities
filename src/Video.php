@@ -18,7 +18,7 @@ final class Video
         $video_id = '';
 
         // YouTube URLs
-        if (preg_match('/youtube/', $url, $id)) {
+        if (preg_match('/youtube/', $url, $id) || preg_match('/youtu\.be/', $url, $id)) {
             if (preg_match('/youtube\.com\/watch\?v=([^\&\?\/]+)/', $url, $id)) {
                 $video_id = $id[1];
             } elseif (preg_match('/youtube\.com\/embed\/([^\&\?\/]+)/', $url, $id)) {
@@ -53,14 +53,12 @@ final class Video
         $id = self::getIDFromVideoURL($url);
 
         if ($id) {
-            if (strpos($url, 'youtube')) {
+            if (strpos($url, 'youtube') || strpos($url, 'youtu.be')) {
                 $url = 'https://www.youtube.com/embed/' . $id . '?autoplay=1';
             } elseif (strpos($url, 'vimeo')) {
                 $url = 'https://player.vimeo.com/video/' . $id . '?autoplay=1';
             }
         } else {
-            //TODO: figure out standard error handling
-            // error_log(BOKKA_STD_ERROR . "Invalid video ID {" . __FILE__ . "}", 0);
             return false;
         }
 
